@@ -1,6 +1,6 @@
 {
-  "name": "autobooth.elenemts.com Photobooth",
-  "short_name": "autobooth",
+  "name": "photobooth.elenemts.com Photobooth",
+  "short_name": "photobooth",
   "description": "Professional photobooth rental services in Vadodara, Gujarat",
   "start_url": "/index.html",
   "display": "standalone",

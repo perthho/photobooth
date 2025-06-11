@@ -6,4 +6,4 @@ Disallow: /js/
 Disallow: /fonts/
 Disallow: /scss/
 
-Sitemap: https://autobooth.elenemts.com/sitemap.xml 
+Sitemap: https://photobooth.elenemts.com/sitemap.xml 
