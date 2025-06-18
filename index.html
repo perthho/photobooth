@@ -97,6 +97,36 @@
       .hover-scale:hover {
         transform: scale(1.05);
       }
+      .video-section {
+        height: 70vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      @media (min-width: 1200px) {
+        .video-section {
+          height: 70vh;
+        }
+      }
+
+      .object-fit-cover {
+        object-fit: cover;
+      }
+
+      .video-overlay {
+        background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+        top: 0;
+        left: 0;
+      }
+
+      .bg-image {
+        background-image: url('./images/IMG_0017_20250614_072056.webp'); /* Replace with your image */
+        background-size: cover;
+        background-position: center;
+      }
+
+
+
     </style>
     
     <title>elenemts | Photobooth Rental in Vadodara | Weddings, Corporate & University Events | Instant Prints | DSLR Quality </title>
@@ -169,6 +199,7 @@
               <nav class="site-navigation position-relative text-right" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                   <li><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                   <li><a href="plans.html" class="nav-link">Plans</a></li>
                   <li><a href="contact.html" class="nav-link">Contact</a></li>
                   <!-- <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
@@ -187,70 +218,36 @@
 
 
 <!-- carousel -->
+<section class="video-section position-relative d-flex align-items-center">
+  <!-- Mobile: Video -->
+  <video autoplay muted loop playsinline class="bg-video d-block d-xl-none w-100 h-100 position-absolute object-fit-cover" style="z-index: -2;">
+    <source src="images/IMG_3550.webm" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-      <div id="carouselExample" class="carousel slide carousel-fade pt-5" data-bs-ride="carousel" >
-        <div class="carousel-inner" id="home">
-            <div class="carousel-item active" >
-              <section class="bsb-cta-1 px-2 bsb-overlay" style="background-image: url('./images/cff57e2b-5736-46eb-a1eb-e28bc0ad15d5.webp');">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-11 col-xl-12">
-                      <h1 class="display-1 text-md-start fw-bold mb-4 pt-5 pl-2 text-white">Capture the Moment, Instantly! </h1>
-                      <p class="lead text-md-start text-shadow d-flex justify-content-sm-center justify-content-md-start">
-                        <span class="col-12 col-sm-10 col-md-8 col-xxl-7" >Save memories forever with our smart photobooth – snap and print in seconds.</span>
-                      </p>
-                      <div class="pl-3">
-                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg hover-scale" href="datepicker.html" role="button" style="border-radius: 0pc;">Enquiry Now</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="carousel-item">
-              <section class="bsb-cta-1 px-2 bsb-over'" style="background-image: url('./images/lilepicdesign-room-1520-birthday290-min.webp');">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-11 col-xl-12">
-                      <h2 class="display-1 text-md-start fw-bold mb-4 pt-5 pl-2 text-white">Capture the Moment, Instantly! </h2>
-                      <p class="lead text-md-start text-shadow d-flex justify-content-sm-center justify-content-md-start">
-                        <span class="col-12 col-sm-10 col-md-8 col-xxl-7" >Save memories forever with our smart photobooth – snap and print in seconds.</span>
-                      </p>
-                      <div class="pl-3">
-                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg hover-scale" href="datepicker.html" role="button" style="border-radius: 0pc;">Book Now</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-            <div class="carousel-item">
-              <section class="bsb-cta-1 px-2 bsb-overlay" style="background-image: url('./images/wedding-photo-booth-hire-1.webp');">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-11 col-xl-12">
-                      <h2 class="display-1 text-md-start fw-bold mb-4 pt-5 pl-2 text-white">Capture the Moment, Instantly! </h2>
-                      <p class="lead text-md-start text-shadow d-flex justify-content-sm-center justify-content-md-start">
-                        <span class="col-12 col-sm-10 col-md-8 col-xxl-7" >Save memories forever with our smart photobooth – snap and print in seconds.</span>
-                      </p>
-                      <div class="pl-3">
-                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg hover-scale" href="datepicker.html" role="button" style="border-radius: 0pc;">Book Now</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
+  <!-- Desktop: Static Image -->
+  <div class="bg-image d-none d-xl-block position-absolute w-100 h-100" style="z-index: -2;"></div>
+
+  <!-- Overlay -->
+  <div class="video-overlay position-absolute w-100 h-100" style="z-index: -1;"></div>
+
+  <!-- Content (centered vertically only) -->
+  <div class="container text-white" style="position: relative; z-index: 1;">
+    <div class="row">
+      <div class="col-md-11 col-xl-12">
+        <h1 class="display-1 text-md-start fw-bold mb-4 pl-2">Capture the Moment, Instantly!</h1>
+        <p class="lead text-md-start text-shadow d-flex justify-content-sm-center justify-content-md-start">
+          <span class="col-12 col-sm-10 col-md-8 col-xxl-7">Save memories forever with our smart photobooth – snap and print in seconds.</span>
+        </p>
+        <div class="pl-3">
+          <a class="btn btn-outline-light btn-lg hover-scale" href="datepicker.html" role="button" style="border-radius: 0px;">Enquiry Now</a>
         </div>
-        <button class="carousel-control-prev visually-hidden" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next visually-hidden" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
       </div>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- carousel -->
 
