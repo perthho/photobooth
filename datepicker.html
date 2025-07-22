@@ -3,7 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Form</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Photobooth For Rent - Compare our Basic, Pro, and Ultra plans for your event. Book now and capture memories instantly!">
+    <meta name="keywords" content="photobooth rental, event photobooth, plans, booking">
+    <link rel="canonical" href="https://photobooth.elenemts.com/gallery.html">
+    <meta property="og:title" content="Photobooth For Rent - Plans">
+    <meta property="og:description" content="Compare our Basic, Pro, and Ultra plans for your event. Book now and capture memories instantly!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://photobooth.elenemts.com/gallery.html">
+    <meta property="og:image" content="https://photobooth.elenemts.com/images/elenemtsPhotobooth.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photobooth For Rent - Plans">
+    <meta name="twitter:description" content="Compare our Basic, Pro, and Ultra plans for your event. Book now and capture memories instantly!">
+    <meta name="twitter:image" content="https://photobooth.elenemts.com/images/elenemtsPhotobooth.png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="icon" href="images/no-bg-elenemts.png" type="image/x-icon">
+    <title>Booking Form</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,13 +34,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
   <style>
-    #map {
-      height: 300px;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    }
-
     .booked-date {
       background-color: #f8d7da !important;
       color: #721c24 !important;
@@ -26,9 +41,6 @@
     }
 
     .form-container {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 2rem;
     }
 
@@ -47,34 +59,85 @@
     }
   </style>
 
-  <!-- Google Maps API -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnGOd4MOLJ6bqjaJehTNaH18M9F_Dgt0I&libraries=places"></script>
 </head>
-<body style="background-color: #000000;">
-  <div class="container mt-3 mb-3">
-    <div class="row justify-content-center">
+  <body class="text-black bg-white h1-light" style="font-family:montserrat;">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+   
+
+<!-- header -->
+
+      <header class="site-navbar js-sticky-header site-navbar-target bg-black" role="banner">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-xl-2">
+              <a href="index.html"><img src="images/elenemtsPhotobooth.png" alt="Elenemts Photobooth Logo" height="30"></a>
+            </div>
+            <div class="col-12 col-md-10 d-none d-xl-block">
+              <nav class="site-navigation position-relative text-right" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                  <li><a href="index.html" class="nav-link">Home</a></li>
+                  <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                  <li><a href="plans.html" class="nav-link">Plans</a></li>
+                  <li><a href="contact.html" class="nav-link">Contact</a></li>
+                  <!-- <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+                  <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li> -->
+                  <li class="social"><a href="https://www.instagram.com/photobooth.elenemts" class="nav-link"><span class="icon-instagram"></span></a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+          </div>
+        </div>
+      </header>
+
+<!-- header -->
+
+
+<!-- Main -->
+
+<div class="container py-4 bg-white">
+
+    <h2 class="mb-5 pt-5 pb-2 mt-5 border-bottom pl-3">Booking Request Form</h2>
+    <div class="container mt-3 mb-3">
+    <div class="row justify-content-center justify-content-lg-start">
       <div class="col-md-8">
         <div class="form-container">
-          <h3 class="form-title text-dark"> <a href="index.html">elenemts </a>Photobooth Booking Form</h3>
           <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="b3965599-dce8-4e0c-a27a-33a0ef0b753d">
 
             <!-- Form fields -->
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+              <input type="text" style="border-bottom: 1px solid rgba(0, 0, 0, 0.66);" id="name" placeholder="Enter your full name" name="name" required>
             </div>
 
             <div class="mb-3">
-              <label for="contact" class="form-label">Contact Number</label>
-              <input type="tel" class="form-control" id="contact" placeholder="Enter your contact number" name="contact" required pattern="[0-9]{10}">
-              <small class="form-text text-muted">Enter a 10-digit mobile number.</small>
+              <label class="form-label">WhatsApp?</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="contactType" id="whatsappYes" value="whatsapp" checked>
+                <label class="form-check-label" for="whatsappYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="contactType" id="whatsappNo" value="contact">
+                <label class="form-check-label" for="whatsappNo">No, use my contact number</label>
+              </div>
             </div>
 
             <div class="mb-3">
-              <label for="plan" class="form-label">Select Plan</label>
-              <select id="plan" class="form-select" name="plan" required style="border-radius: 0px;">
-                <option value="">Select a plan</option>
+              <input type="tel" style="border-bottom: 1px solid rgba(0, 0, 0, 0.66);" id="contact" placeholder="Enter your whatsapp number" name="whatsapp_number" required pattern="[0-9]{10}">
+            </div>
+
+            <div class="mb-3">
+              <label for="select-plan">Select Plan</label>
+              <select id="plan" name="plan" required style="border-bottom: 1px solid rgba(0, 0, 0, 0.66);">              
                 <option value="basic">Basic</option>
                 <option value="pro">Pro</option>
                 <option value="ultra">Ultra</option>
@@ -82,60 +145,103 @@
             </div>
 
             <div class="mb-3">
-              <label for="datepicker" class="form-label">Select a Date</label>
               <input type="hidden" id="datepicker" name="date" required>
-              <button type="button" id="chooseDateButton" class="btn btn-outline-primary">Choose Date</button>
+              <button type="button" id="chooseDateButton" class="btn btn-outline-dark rounded-0">Choose Date</button>
               <div id="inlineDatePicker"></div>
-              <div id="selectedDate" class="mt-2 text-black"></div>
+              <div id="selectedDate" class="mt-2 text-black fw-bold"></div>
             </div>
 
             <div class="mb-3">
-              <label for="locationInput" class="form-label">Search Location</label>
-              <input type="text" id="locationInput" name="location" class="form-control mb-2" placeholder="Search for a location">
-              <div id="map"></div>
+              <input type="text" style="border-bottom: 1px solid rgba(0, 0, 0, 0.66);" id="address" placeholder="Enter your address" name="address" required>
             </div>
 
             <div class="mb-3">
-              <label for="streetName" class="form-label">Street Name</label>
-              <input type="text" id="streetName" name="streetName" class="form-control" placeholder="Street name" readonly>
+              <textarea id="questions" name="questions" rows="5" placeholder="Any questions or queries? Let us know here!" style="border-bottom: 1px solid rgba(0, 0, 0, 0.66); border-radius: 0px; width: 100%;"></textarea>
             </div>
-
-            <div class="mb-3">
-              <label for="address" class="form-label">Address</label>
-              <input type="text" id="address" name="address" class="form-control" placeholder="Full address" readonly>
-            </div>
-
             <!-- Terms -->
-            <!-- <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="terms1" required>
-              <label class="form-check-label" for="terms1">
-                I acknowledge all transactions are final with no refunds, and I agree to the terms and conditions.
-              </label>
-            </div> -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="terms2" required>
               <label class="form-check-label" for="terms2">
-                I confirm that all information provided is accurate and complete.
+                <b>I confirm that all information provided is accurate and complete.</b>
               </label>
             </div>
 
             <button type="submit" class="btn btn-outline-dark mt-3" style="border-radius: 0px;">Request Booking</button>
           </form>
+          <div id="formResult" class="mt-3"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</div>
 
+
+<!-- Main -->
+
+
+<!-- content -->
+
+  <!-- Whatsapp Icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=919313383425&text=Hi! I need more info about Instant Photobooth https://photobooth.elenemts.com" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+<!-- Footer -->
+
+      <footer class="text-start text-white bg-black">
+        <div class="container p-4">
+          <div class="row">
+            <!-- Mission Statement -->
+            <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+              <section>
+                <h5 class="text-uppercase mb-3">Our Mission</h5>
+                <p class="mb-0">We aim to expand our offerings and connect with customers across whole India.</p>
+              </section>
+            </div>
+            <!-- Contact Info -->
+            <div class="col-lg-6 col-md-12">
+              <section>
+                <h5 class="text-uppercase mb-3">Contact Information</h5>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h6 class="text-uppercase mb-2">Address</h6>
+                    <p class="mb-1">Shyamal County, Waghodia Road, Vadodara [390019]</p>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="text-uppercase mb-2">Phone</h6>
+                    <p class="mb-0">+91 93133 83425</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+          © 2025 Copyright:
+          <a class="text-link" href="https://photobooth.elenemts.com/">elenemts</a>
+        </div>
+      </footer>
+
+
+<!-- Footer -->
+  
+  
+      <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Bootstrap Datepicker JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-  <!-- Script -->
+  <!-- Other JS plugins -->
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Page-specific scripts -->
   <script>
     $(document).ready(function () {
 
@@ -170,62 +276,70 @@
         } else {
           $('#datepicker').val(selectedDate);
           $('#selectedDate').text(`Selected Date: ${selectedDate}`);
+          $('#inlineDatePicker').hide();
         }
       });
 
       $('#chooseDateButton').click(() => $('#inlineDatePicker').toggle());
 
-      // Google Maps Integration
-      let map, marker;
-      function initMap() {
-        const initialLocation = { lat: 20.5937, lng: 78.9629 };
+      $('input[name="contactType"]').change(function() {
+        const contactInput = $('#contact');
+        if (this.value === 'whatsapp') {
+          contactInput.attr('placeholder', 'Enter your WhatsApp number');
+          contactInput.attr('name', 'whatsapp_number');
+        } else {
+          contactInput.attr('placeholder', 'Enter your contact number');
+          contactInput.attr('name', 'contact_number');
+        }
+      });
 
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: initialLocation,
-          zoom: 5,
+      $('#bookingForm').on('submit', function(e) {
+        e.preventDefault();
+        const form = $(this);
+        const result = $('#formResult');
+        const submitButton = form.find('button[type="submit"]');
+
+        const formData = new FormData(form[0]);
+        const object = {};
+        formData.forEach((value, key) => {
+            object[key] = value;
         });
+        const json = JSON.stringify(object);
+        
+        result.html('<div class="alert alert-info">Please wait...</div>').show();
+        submitButton.prop('disabled', true);
 
-        marker = new google.maps.Marker({
-          position: initialLocation,
-          map: map,
-          draggable: true,
-        });
-
-        const locationInput = document.getElementById('locationInput');
-        const autocomplete = new google.maps.places.Autocomplete(locationInput);
-        autocomplete.bindTo('bounds', map);
-
-        autocomplete.addListener('place_changed', () => {
-          const place = autocomplete.getPlace();
-          if (place.geometry) {
-            map.setCenter(place.geometry.location);
-            map.setZoom(15);
-            marker.setPosition(place.geometry.location);
-            fillLocationDetails(place);
-          }
-        });
-
-        map.addListener('click', (event) => {
-          const clickedLocation = event.latLng;
-          map.setCenter(clickedLocation);
-          marker.setPosition(clickedLocation);
-          const geocoder = new google.maps.Geocoder();
-          geocoder.geocode({ location: clickedLocation }, (results, status) => {
-            if (status === 'OK' && results[0]) {
-              fillLocationDetails(results[0]);
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let jsonResponse = await response.json();
+            if (response.status == 200) {
+                result.html('<div class="alert alert-success">Form submitted successfully! We will get back to you shortly.</div>');
+                form[0].reset();
+                $('#datepicker').val('');
+                $('#selectedDate').text('');
+            } else {
+                console.log(response);
+                result.html(`<div class="alert alert-danger">${jsonResponse.message}</div>`);
             }
-          });
+        })
+        .catch(error => {
+            console.log(error);
+            result.html('<div class="alert alert-danger">Something went wrong! Please try again.</div>');
+        })
+        .finally(() => {
+            submitButton.prop('disabled', false);
+            setTimeout(() => {
+                result.hide().html('');
+            }, 6000);
         });
-      }
-
-      function fillLocationDetails(place) {
-        const street = place.address_components?.find(c => c.types.includes('route'))?.long_name || '';
-        const address = place.formatted_address || '';
-        $('#streetName').val(street);
-        $('#address').val(address);
-      }
-
-      initMap();
+      });
     });
   </script>
     <script>
@@ -242,5 +356,5 @@
         planDropdown.value = selectedPlan;
       }
     </script>
-</body>
-</html>
+  </body>
+  </html>

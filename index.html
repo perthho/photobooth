@@ -55,8 +55,7 @@
       .carousel-inner,
       .carousel-item,
       .carousel-item section {
-        height: 70vh; /* Full viewport height */
-        min-height: 400; /* Minimum height to prevent layout issues on small screens */
+        min-height: 400px; /* Minimum height to prevent layout issues on small screens */
       }
 
       .carousel-item section {
@@ -103,7 +102,10 @@
         position: relative;
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 992px) {
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item section,
         .video-section {
           height: 70vh;
         }
@@ -125,7 +127,21 @@
         background-position: center;
       }
 
+      .gallery-carousel .carousel-item {
+        aspect-ratio: 16 / 9; /* Responsive aspect ratio */
+      }
 
+      @media (max-width: 767.98px) {
+        .gallery-carousel .carousel-item {
+          height: 500px;
+        }
+      }
+
+      .gallery-carousel .carousel-item img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
 
     </style>
     
@@ -221,7 +237,8 @@
 <section class="video-section position-relative d-flex align-items-center">
   <!-- Mobile: Video -->
   <video autoplay muted loop playsinline class="bg-video d-block d-xl-none w-100 h-100 position-absolute object-fit-cover" style="z-index: -2;">
-    <source src="images/IMG_3550.webm" type="video/mp4">
+    <source src="images/IMG_3550.mp4" type="video/mp4">
+    <source src="images/IMG_3550.webm" type="video/webm">
     Your browser does not support the video tag.
   </video>
 
@@ -320,6 +337,46 @@
           </div>
         </div>
       </section>
+
+<!-- benefits thing -->
+
+<!-- Gallery Showcase -->
+<section class="py-5 py-xl-8">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <p class="text-black mb-1 text-center lead fs-4">Best Moments captured by Us.</p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div id="galleryCarousel" class="carousel slide gallery-carousel" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img loading="lazy" src="./images/Gallery/PictureOne.webp" class="d-block w-100" alt="Gallery image">
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="./images/Gallery/PictureTwo.webp" class="d-block w-100" alt="Gallery image">
+            </div>
+            <div class="carousel-item">
+              <img loading="lazy" src="./images/Gallery/20250214_214837_272.webp" class="d-block w-100" alt="Gallery image">
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <a href="gallery.html" class="btn btn-outline-dark btn-lg rounded-0">View All</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Gallery Showcase -->
 
 <!-- Process thing -->
 
