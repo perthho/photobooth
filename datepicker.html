@@ -158,7 +158,7 @@
             <div class="form-check">
               <input class="form-check-input" type="checkbox" id="terms2" required>
               <label class="form-check-label" for="terms2">
-                <b>I confirm that all information provided is accurate and complete.</b>
+                <b>I confirm that all information provided is accurate and complete. I agree to the <a href="#" id="termsLink" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>.</b>
               </label>
             </div>
 
@@ -208,6 +208,7 @@
                     <h6 class="text-uppercase mb-2">Phone</h6>
                     <p class="mb-0">+91 93133 83425</p>
                     <p class="mb-0">+91 9306900217</p>
+                    <p><b>Email:</b> contact@elenemts.com</p>
                   </div>
                 </div>
               </section>
@@ -354,4 +355,30 @@
       }
     </script>
   </body>
+  <!-- Terms and Conditions Modal -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ol style="padding-left: 1.2em;">
+            <li><b>Booking Confirmation:</b> Bookings are only confirmed upon receipt of a 50% advance payment and written confirmation from Elenemts Photobooth.</li>
+            <li><b>Non-Refundable Policy:</b> Once a booking is confirmed, all payments made are non-refundable under any circumstances, including cancellations or changes in event date.</li>
+            <li><b>Event Changes:</b> Any request to change the event date is subject to availability and must be communicated at least 7 days in advance. Additional charges may apply.</li>
+            <li><b>Client Responsibilities:</b> The client is responsible for providing a suitable space, access to electricity, and a stable internet connection or WiFi for the photobooth setup.</li>
+            <li><b>Damage and Misuse:</b> The client will be held liable for any damage to the photobooth or its accessories caused by misuse or negligence during the event.</li>
+            <li><b>Service Duration:</b> The photobooth will be operational only for the duration specified in the selected plan. Additional hours may incur extra charges.</li>
+            <li><b>Photo Usage:</b> Elenemts Photobooth reserves the right to use event photos for promotional purposes unless otherwise requested in writing by the client.</li>
+            <li><b>Force Majeure:</b> We are not liable for failure to provide services due to circumstances beyond our control (e.g., natural disasters, government restrictions).</li>
+          </ol>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   </html>
