@@ -162,7 +162,7 @@
               </label>
             </div>
 
-            <button type="submit" class="btn btn-outline-dark mt-3" style="border-radius: 0px;">Request Booking</button>
+            <button type="submit" class="btn btn-outline-dark mt-3" style="border-radius: 0px;" id="submitBtn" disabled>Request Booking</button>
           </form>
           <div id="formResult" class="mt-3"></div>
         </div>
@@ -338,6 +338,13 @@
             }, 6000);
         });
       });
+
+      // Enable submit button only if terms are checked
+      $('#terms2').on('change', function() {
+        $('#submitBtn').prop('disabled', !this.checked);
+      });
+      // On page load, ensure button is disabled
+      $('#submitBtn').prop('disabled', !$('#terms2').is(':checked'));
     });
   </script>
     <script>
@@ -365,7 +372,7 @@
         </div>
         <div class="modal-body">
           <ol style="padding-left: 1.2em;">
-            <li><b>Booking Confirmation:</b> Bookings are only confirmed upon receipt of a 50% advance payment and written confirmation from Elenemts Photobooth.</li>
+            <li><b>Booking Confirmation:</b> Bookings are only confirmed upon receipt of a 50% advance payment confirmed from Elenemts Photobooth.</li>
             <li><b>Non-Refundable Policy:</b> Once a booking is confirmed, all payments made are non-refundable under any circumstances, including cancellations or changes in event date.</li>
             <li><b>Event Changes:</b> Any request to change the event date is subject to availability and must be communicated at least 7 days in advance. Additional charges may apply.</li>
             <li><b>Client Responsibilities:</b> The client is responsible for providing a suitable space, access to electricity, and a stable internet connection or WiFi for the photobooth setup.</li>
@@ -376,7 +383,7 @@
           </ol>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-dark rounded-0" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
