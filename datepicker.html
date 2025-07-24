@@ -108,7 +108,7 @@
       <div class="col-md-8">
         <div class="form-container">
           <form id="bookingForm" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="b3965599-dce8-4e0c-a27a-33a0ef0b753d">
+            <input type="hidden" name="access_key" value="74dd8c9e-3c81-49c1-bf6f-392b236e145d">
 
             <!-- Form fields -->
             <div class="mb-3">
@@ -156,9 +156,14 @@
             </div>
             <!-- Terms -->
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="terms2" required>
+              <input class="form-check-input" type="checkbox" required>
+                <b>I confirm that all information provided is accurate and complete. </a>.</b>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="terms2" name="i-accept-all-the-terms-and-conditions-mentioned-on-photobooth.elenemt.com" required>
               <label class="form-check-label" for="terms2">
-                <b>I confirm that all information provided is accurate and complete. I agree to the <a href="#" id="termsLink" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>.</b>
+                <b>I agree to the <a href="#" id="termsLink" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>.</b>
               </label>
             </div>
 
@@ -360,6 +365,14 @@
         const planDropdown = document.getElementById('plan');
         planDropdown.value = selectedPlan;
       }
+    </script>
+    <script>
+      document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const isChecked = document.getElementById('i-accept-all-the-terms-and-conditions-mentioned-on-photobooth.elenemt.com').checked;
+        const result = isChecked ? 'yes' : 'no';
+        console.log(result); // or send result to server
+      });
     </script>
   </body>
   <!-- Terms and Conditions Modal -->
