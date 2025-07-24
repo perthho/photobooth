@@ -142,7 +142,19 @@
         object-fit: cover;
         width: 100%;
       }
-
+      .word-animate-box {
+        display: inline-block;
+        height: 1.2em;
+        overflow: hidden;
+        vertical-align: bottom;
+        position: relative;
+        min-width: 160px;
+      }
+      .word-animate-text {
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.77,0,0.175,1);
+        will-change: transform;
+      }
     </style>
     
     <title>elenemts | Photobooth Rental in Gujarat | Vadodara, Ahmedabad, Surat | Weddings, Corporate & Events</title>
@@ -252,7 +264,7 @@
   <div class="container text-white" style="position: relative; z-index: 1;">
     <div class="row">
       <div class="col-md-11 col-xl-12">
-        <h1 class="display-1 text-md-start fw-bold mb-4 pl-2">Capture the Moment, Instantly!</h1>
+        <h1 class="display-1 text-md-start fw-bold mb-4 pl-2">Capture the Moment, <span class="word-animate-box"><span class="word-animate-text">Instantly!</span></span></h1>
         <p class="lead text-md-start text-shadow d-flex justify-content-sm-center justify-content-md-start">
           <span class="col-12 col-sm-10 col-md-8 col-xxl-7">Save memories forever with our smart photobooth – snap and print in seconds.</span>
         </p>
@@ -518,6 +530,33 @@
         handleScrollAnimations();
       });
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
+    <script>
+      // Animated words for heading
+      (function() {
+        const words = ["Instantly!", "Effortlessly!", "Beautifully!", "Creatively!"];
+        const colors = ["#fa003f", "#c172e9", "#ffd700", "#00b4d8"]; // red, purple, gold, blue
+        let idx = 0;
+        const box = document.querySelector('.word-animate-box');
+        const text = box.querySelector('.word-animate-text');
+        text.style.color = colors[0];
+        function nextWord() {
+          idx = (idx + 1) % words.length;
+          // Animate up
+          text.style.transform = 'translateY(-100%)';
+          setTimeout(() => {
+            text.textContent = words[idx];
+            text.style.color = colors[idx];
+            text.style.transition = 'none';
+            text.style.transform = 'translateY(100%)';
+            // Force reflow
+            void text.offsetWidth;
+            text.style.transition = 'transform 0.5s cubic-bezier(0.77,0,0.175,1)';
+            text.style.transform = 'translateY(0)';
+          }, 500);
+        }
+        setInterval(nextWord, 2000);
+      })();
     </script>
   </body>
 </html>
