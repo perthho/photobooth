@@ -57,6 +57,93 @@
     #inlineDatePicker {
       display: none;
     }
+          /* Download Catalogue Button Styles */
+          .download-catalogue-btn {
+        position: fixed;
+        bottom: 70px;
+        left: 30px;
+        z-index: 1000;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border: none;
+        overflow: hidden;
+      }
+      
+      .download-catalogue-btn.expanded {
+        width: auto;
+        height: auto;
+        padding: 15px 25px;
+        border-radius: 50px;
+        background: linear-gradient(135deg, #000000, #333333);
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        min-width: 280px;
+      }
+      
+      .download-catalogue-btn.collapsed {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #000000, #333333);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+      }
+      
+      .download-catalogue-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+      }
+      
+      .download-catalogue-btn.expanded:hover {
+        background: linear-gradient(135deg, #333333, #000000);
+      }
+      
+      .download-catalogue-btn.collapsed:hover {
+        background: linear-gradient(135deg, #333333, #000000);
+      }
+      
+      .download-catalogue-btn .btn-text {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+      }
+      
+      .download-catalogue-btn.collapsed .btn-text {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+      }
+      
+      .download-catalogue-btn .download-icon {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        margin-left: 0;
+      }
+      
+      .download-catalogue-btn.collapsed .download-icon {
+        opacity: 1;
+        margin-left: 0;
+      }
+      
+      .download-catalogue-btn.expanded .download-icon {
+        margin-left: 10px;
+      }
+      
+      /* Animation for the transformation */
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      .download-catalogue-btn.collapsed {
+        animation: pulse 2s infinite;
+      }
   </style>
 
 </head>
@@ -71,6 +158,12 @@
         <div class="site-mobile-menu-body"></div>
       </div>
    
+            <!-- Download Catalogue Button -->
+            <button class="download-catalogue-btn expanded" id="downloadCatalogueBtn" onclick="downloadCatalogue()">
+              <span class="btn-text">Download Our Photobooth Catalogue</span>
+              <i class="bi bi-download download-icon"></i>
+            </button>
+      
 
 <!-- header -->
 
@@ -492,6 +585,50 @@
     </script>
     <script>
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
+            
+      // Download Catalogue Button Animation
+      function downloadCatalogue() {
+        // Create a temporary link element to trigger download
+        const link = document.createElement('a');
+        link.href = 'images/photobooth_catalogue.pdf';
+        link.download = 'elenemts_photobooth_catalogue.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+      
+      // Check if button should be collapsed based on localStorage
+      function initializeDownloadButton() {
+        const downloadBtn = document.getElementById('downloadCatalogueBtn');
+        const buttonState = localStorage.getItem('downloadButtonState');
+        const lastVisitTime = localStorage.getItem('downloadButtonLastVisit');
+        const currentTime = Date.now();
+        
+        // If button was already collapsed or if it's been more than 3 seconds since first visit
+        if (buttonState === 'collapsed' || (lastVisitTime && (currentTime - lastVisitTime) > 3000)) {
+          downloadBtn.classList.remove('expanded');
+          downloadBtn.classList.add('collapsed');
+        } else {
+          // Set the first visit time if not set
+          if (!lastVisitTime) {
+            localStorage.setItem('downloadButtonLastVisit', currentTime);
+          }
+          
+          // Transform button after 3 seconds from first visit
+          const timeSinceFirstVisit = lastVisitTime ? (currentTime - lastVisitTime) : 0;
+          const remainingTime = Math.max(0, 3000 - timeSinceFirstVisit);
+          
+          setTimeout(function() {
+            const downloadBtn = document.getElementById('downloadCatalogueBtn');
+            downloadBtn.classList.remove('expanded');
+            downloadBtn.classList.add('collapsed');
+            localStorage.setItem('downloadButtonState', 'collapsed');
+          }, remainingTime);
+        }
+      }
+      
+      // Initialize button when page loads
+      document.addEventListener('DOMContentLoaded', initializeDownloadButton);
     </script>
   </body>
   <!-- Terms and Conditions Modal -->

@@ -341,7 +341,7 @@ a {
           border-radius:50px;
           text-align:center;
           font-size:30px;
-          z-index:100;
+          z-index:1000;
         }
 
         .my-float{
