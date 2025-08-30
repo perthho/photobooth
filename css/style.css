@@ -591,3 +591,218 @@ form textarea {
     height: 400px;
   }
 }
+
+/* Footer Styles */
+footer {
+  position: relative;
+  z-index: 100;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+footer h5, footer h6 {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+footer .social-links a {
+  display: inline-block;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+footer .social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+footer .list-unstyled li a {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+footer .list-unstyled li a:hover {
+  color: #007bff !important;
+  padding-left: 5px;
+}
+
+footer .list-unstyled li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 1px;
+  background: #007bff;
+  transition: width 0.3s ease;
+  transform: translateY(-50%);
+}
+
+footer .list-unstyled li a:hover::before {
+  width: 100%;
+}
+
+footer hr {
+  opacity: 0.2;
+}
+
+/* Footer Modal Styles */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  background: #000;
+  color: #fff;
+  border-bottom: 2px solid #007bff;
+}
+
+.modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.modal-body ol li,
+.modal-body ul li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  footer .container {
+    padding: 2rem 1rem;
+  }
+  
+  footer .row.g-4 {
+    margin: 0;
+  }
+  
+  footer .col-lg-4,
+  footer .col-lg-2,
+  footer .col-lg-3,
+  footer .col-md-6 {
+    margin-bottom: 2rem;
+  }
+  
+  footer .social-links {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  footer .social-links a {
+    margin: 0 0.5rem;
+  }
+  
+  footer .text-md-end {
+    text-align: center !important;
+  }
+  
+  .modal-dialog {
+    margin: 1rem;
+  }
+  
+  .modal-body {
+    max-height: 60vh;
+  }
+}
+
+@media (max-width: 576px) {
+  footer h5 {
+    font-size: 1.1rem;
+  }
+  
+  footer h6 {
+    font-size: 1rem;
+  }
+  
+  footer p {
+    font-size: 0.9rem;
+  }
+  
+  footer .social-links a {
+    padding: 6px;
+    font-size: 1.2rem;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem;
+  }
+  
+  .modal-body {
+    padding: 1rem;
+  }
+}
+
+/* Footer Animation */
+footer section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+footer section:nth-child(1) { animation-delay: 0.1s; }
+footer section:nth-child(2) { animation-delay: 0.2s; }
+footer section:nth-child(3) { animation-delay: 0.3s; }
+footer section:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer Hover Effects */
+footer .col-lg-4:hover,
+footer .col-lg-2:hover,
+footer .col-lg-3:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styles */
+footer .bi {
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+/* Link Hover Effects */
+footer a {
+  position: relative;
+  overflow: hidden;
+}
+
+footer a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+footer a:hover::after {
+  width: 100%;
+}
