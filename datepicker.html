@@ -249,6 +249,12 @@
               <button type="button" id="chooseDateButton" class="btn btn-outline-dark rounded-0">Choose Date</button>
               <div id="inlineDatePicker"></div>
               <div id="selectedDate" class="mt-2 text-black fw-bold"></div>
+                <div id="timeRangeFields" class="mt-2" style="display:none;">
+                  <label for="startTime" class="form-label">Start Time</label>
+                  <input type="time" id="startTime" name="startTime" class="form-control mb-2" required>
+                  <label for="endTime" class="form-label">End Time</label>
+                  <input type="time" id="endTime" name="endTime" class="form-control" required>
+                </div>
             </div>
 
             <div class="mb-3">
@@ -495,6 +501,7 @@
           $('#datepicker').val(selectedDate);
           $('#selectedDate').text(`Selected Date: ${selectedDate}`);
           $('#inlineDatePicker').hide();
+            $('#timeRangeFields').show();
         }
       });
 
